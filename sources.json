@@ -1,0 +1,86 @@
+{
+  "addon": {
+    "id": "community.iceland.news",
+    "version": "1.0.0",
+    "name": "Ísland – Fréttir / Iceland News",
+    "description": "Official free streams from RÚV, the Icelandic National Broadcasting Service: live TV and on-demand news. / Opinberar, ókeypis útsendingar RÚV: bein útsending og fréttir á vefnum.",
+    "logo": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+    "background": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg"
+  },
+  "settings": {
+    "cacheTtlSeconds": { "live": 60, "episodes": 300, "programId": 3600 },
+    "requestTimeoutMs": 10000,
+    "episodesPerProgram": 30,
+    "geoApi": "https://geo.spilari.ruv.is/channel/",
+    "gqlApi": "https://www.ruv.is/gql/"
+  },
+  "live": [
+    {
+      "id": "ruv",
+      "enabled": true,
+      "name": "RÚV",
+      "channel": "ruv",
+      "webUrl": "https://www.ruv.is/sjonvarp/beint/ruv",
+      "logo": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+      "description": "RÚV – live broadcast of the main Icelandic public TV channel.",
+      "descriptionIs": "RÚV – bein útsending aðalsjónvarpsrásar Ríkisútvarpsins.",
+      "fallbackUrl": "https://ruv-web-live.akamaized.net/streymi/ruverl/ruverl.m3u8"
+    },
+    {
+      "id": "ruv2",
+      "enabled": true,
+      "name": "RÚV 2",
+      "channel": "ruv2",
+      "webUrl": "https://www.ruv.is/sjonvarp/beint/ruv2",
+      "logo": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+      "description": "RÚV 2 – live broadcast of RÚV's second channel (sports, events, parliament).",
+      "descriptionIs": "RÚV 2 – bein útsending annarrar rásar RÚV (íþróttir, viðburðir, þingfundir).",
+      "fallbackUrl": "https://ruvlive.akamaized.net/out/v1/2ff7673de40f419fa5164498fae89089/index.m3u8"
+    }
+  ],
+  "programs": [
+    {
+      "id": "frettir",
+      "enabled": true,
+      "name": "Fréttir",
+      "programId": 30762,
+      "searchText": "Fréttir",
+      "slug": "frettir",
+      "poster": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+      "description": "RÚV evening news, daily around 19:00.",
+      "descriptionIs": "Kvöldfréttir RÚV, daglega um klukkan 19:00."
+    },
+    {
+      "id": "frettir-taknmal",
+      "enabled": true,
+      "name": "Fréttir (með táknmálstúlkun)",
+      "programId": 31575,
+      "searchText": "Fréttir",
+      "slug": "frettir-med-taknmalstulkun",
+      "poster": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+      "description": "RÚV evening news with sign-language interpretation.",
+      "descriptionIs": "Kvöldfréttir RÚV með táknmálstúlkun."
+    },
+    {
+      "id": "kastljos",
+      "enabled": true,
+      "name": "Kastljós",
+      "searchText": "Kastljós",
+      "slug": "kastljos",
+      "poster": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+      "description": "Kastljós – news and current-affairs magazine (program ID is looked up each season).",
+      "descriptionIs": "Kastljós – fréttatengdur umræðu- og viðtalsþáttur."
+    },
+    {
+      "id": "silfrid",
+      "enabled": true,
+      "name": "Silfrið",
+      "programId": 39454,
+      "searchText": "Silfrið",
+      "slug": "silfrid",
+      "poster": "https://myndir.ruv.is/media/public/misc/og_image_sjonvarp.jpg",
+      "description": "Silfrið – weekly political discussion programme.",
+      "descriptionIs": "Silfrið – vikulegur stjórnmálaumræðuþáttur."
+    }
+  ]
+}
